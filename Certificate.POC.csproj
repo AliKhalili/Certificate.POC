@@ -7,4 +7,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="jose-jwt" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\privkey.pem">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Remove="Resources\pubkey.pem" />
+    <Content Include="Resources\pubkey.pem">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
